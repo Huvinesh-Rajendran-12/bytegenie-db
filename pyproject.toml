@@ -1,0 +1,7 @@
+[tool.pyright]
+pythonVersion = "3.12"
+venvPath = "."
+venv = ".venv"
+strictListInference = true
+strictDictionaryInference = true
+strictSetInference = true
