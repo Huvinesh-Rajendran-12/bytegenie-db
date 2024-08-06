@@ -52,9 +52,10 @@ This repository contains the database schema and related information for my Byte
    DB_NAME=bytegenie_db
    ```
 
-5. (Optional) Load sample data:
+5. Initialize the database
    ```
-   python scripts/load_sample_data.py
+   cd scripts
+   python init_db.py
    ```
 
 ## Database Schema
@@ -95,10 +96,9 @@ During the database design and implementation, I encountered the following chall
 
 1. Efficiently linking events, companies, and people data
 2. Handling inconsistencies in the original CSV data
-3. Creating appropriate indexes for optimal query performance
+3. Maintaning the accuracy of the data even through augmentations
 4. Deriving and standardizing additional columns (e.g., event_industry, email_address)
 5. Ensuring data integrity across related tables
-6. Optimizing storage for large datasets
 
 ## Future Improvements
 
@@ -106,11 +106,7 @@ If I had more time, I would improve the database design in the following ways:
 
 1. Implement partitioning for large tables to improve query performance
 2. Add more advanced indexing strategies based on common query patterns
-3. Implement a data archiving strategy for historical events
-4. Add full-text search capabilities for more efficient text-based queries
-5. Implement row-level security for future multi-tenant support
-6. Develop a comprehensive data validation and cleaning pipeline
-7. Add support for storing and querying geospatial data
-8. Implement a caching layer for frequently accessed data
-9. Develop a robust backup and recovery strategy
-10. Add support for real-time data updates and change data capture (CDC)
+3. Add full-text search capabilities for more efficient text-based queries
+4. Develop a comprehensive data validation and cleaning pipeline
+5. Implement a caching layer for frequently accessed data
+6. Add support for real-time data updates and change data capture (CDC)
