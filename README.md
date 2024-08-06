@@ -62,33 +62,58 @@ This repository contains the database schema and related information for my Byte
 
 The database consists of the following main tables:
 
-1. `events`
+`company`
 
-   - event_url (Primary Key)
-   - event_name
-   - event_description
-   - event_start_date
-   - event_end_date
-   - event_venue
-   - event_country
-   - event_industry (derived)
+company_logo_url (text)
+company_logo_text (text)
+company_name (text)
+relation_to_event (text)
+event_url (text)
+company_revenue (text)
+n_employees (text)
+company_phone (text)
+company_founding_year (text)
+company_address (text)
+company_industry (text)
+company_overview (text)
+homepage_url (text)
+linkedin_company_url (text)
+homepage_base_url (text)
+company_logo_url_on_event_page (text)
+company_logo_match_flag (text)
 
-2. `companies`
+`event`
 
-   - homepage_base_url (Primary Key)
-   - company_name
-   - company_industry
-   - company_revenue
-   - number_of_employees
+event_logo_url (text)
+event_name (text)
+event_start_date (text)
+event_end_date (text)
+event_venue (text)
+event_country (text)
+event_description (text)
+event_url (text)
+event_industry (text)
 
-3. `people`
+`people`
 
-   - id (Primary Key)
-   - first_name
-   - last_name
-   - job_title
-   - email_address (derived)
-   - company_homepage_base_url (Foreign Key to companies)
+first_name (text)
+middle_name (text)
+last_name (text)
+job_title (text)
+person_city (text)
+person_state (text)
+person_country (text)
+email_pattern (text)
+homepage_base_url (text)
+duration_in_current_job (text)
+duration_in_current_company (text)
+email_address (text)
+
+Note: All columns are of type 'text' according to the provided schema.
+Key Relationships
+
+The company and event tables are related through the `event_url` field.
+The company and people tables are related through the `homepage_base_url` field.
 
 ## Challenges I Faced
 
